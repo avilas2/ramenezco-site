@@ -2,24 +2,25 @@ extends layout
 
 block content
     h1 #{title}
-    form    
+    form(method='post' action='/rewards/join')    
         .form-group
             label Nombre:
-            input.form-control(type='text')
+            input.form-control(name='given_name' type='text')
         .row
             .col 
                 .form-group
                     label Primer Apellido:
-                    input.form-control(type='text')
+                    input.form-control(name='family_name' type='text' )
             .col
                 .form-group
                     label Segundo Apellido:
-                    input.form-control(type='text')
+                    input.form-control(name='sLastName' type='text')
         .form-group
             label Correo Electronico:
-            input.form-control(type='text')
+            input.form-control(name='email_address' type='text')
+            
         .form-group
             label Numero de Telefono:
-            input.form-control(type='text')
+            input.form-control(name='phone' type='text')
         .form-group
             input.btn.btn-primary(type='submit' value='Registrarse')
